@@ -2,13 +2,13 @@
 window.addEventListener('DOMContentLoaded', function () {
 
 	'use strict';  //объявление строгого режима
-	let tab = document.querySelectorAll('.info-header-tab'),
+	let tab = document.querySelectorAll('.info-header-tab'),// три класса взяты из HTML документа (.info-header-tab/.info-header/.info-tabcontent)
 		info = document.querySelector('.info-header'),
 		tabContent = document.querySelectorAll('.info-tabcontent');
 
 	function hideTabContent(a) {
 		for (let i = a; i < tabContent.length; i++) {
-			tabContent[i].classList.remove('show');
+			tabContent[i].classList.remove('show');  // два класса, поведение которых прописано в CSS файле (show & hide)
 			tabContent[i].classList.add('hide');
 		}
 	}
